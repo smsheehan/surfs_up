@@ -44,7 +44,7 @@ This shows us that there are roughly 13 crummy weather days per year in December
 
 ![image](https://user-images.githubusercontent.com/90977689/142483404-1f6e0bf8-ffe6-4178-aaf2-94a467a375ad.png)
 
-Indeed this is the case.  2010, 2011, and 2012 were almost complete washouts with respect to number of crummy weather days.
+Indeed this is the case.  2010, 2011, and 2012 were almost complete washouts with respect to number of crummy weather days.  Surprisingly there were no days in 2014, 2015, or 2016 that met these criteria.  Understanding this in more detail would be helpful and so trying to get data for a broader time period would be helpful.  Also understanding business trends relative to temperature and precipitation would help us arrive at perhaps more informed cutoffs for temperature and rainfall amounts for defining crummy days.
 
 
 

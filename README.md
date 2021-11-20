@@ -28,23 +28,18 @@ Three main points from comparing the two analyses:
 
 At a high level, the data confirms there is opportunity for sales of both surf supplies and ice cream throughout the year.  However, it can be expected that there will be a sales dip in December based on the temperature trends revealed in the analysis.  There are some additional queries we can perform to better understand the December data.
 * First:  are we missing anything by looking at all seven years of data at once?  Is the median temperature wildly different from year to year?  We can probe this with the following code:
-    ![image](https://user-images.githubusercontent.com/90977689/142481091-4781b16b-1d4b-40ab-841c-23dc79fd0546.png)
+* 
+![image](https://user-images.githubusercontent.com/90977689/142726196-7f17fe21-4b18-4293-a318-bdb9643adb85.png)
+
     
-What we see is that the mean temperature remains pretty consistent from year to year.  While 2013 was warmer than usual, all of the other years fall roughly within plus or minus one degree of the mean temperature we obtained from the combined analysis.
+What we see is that the mean temperature remains pretty consistent from year to year.  While 2015 was warmer than usual, all of the other years fall roughly within two degrees of the mean temperature we obtained from the combined analysis.
     
-* Second:  Since temperature isn't the only deciding factor for business, I am curious as to how precipitation might play a role in how we think about December's business.  To test my approach, I arbitrarily decided that days where rainfall was >= 1" or days were the temperature was below 60 degree represented scenarios where we are not likely to get a lot of business.  I probed this with the following code which filtered on either of the two weather occurences.
+* Second:  Since temperature isn't the only deciding factor for business, I am curious as to how precipitation might play a role in how we think about December's business.  To test my approach, I arbitrarily decided that days where rainfall was >= 0.5" or days were the temperature was below 65 degree represented scenarios, or crummy days, where we are not likely to get a lot of business.  I probed this with the following code which filtered on either of the two weather occurences.
 
-![image](https://user-images.githubusercontent.com/90977689/142482236-84aa4673-80eb-4785-a6c7-2476adcbbbc9.png)
+![image](https://user-images.githubusercontent.com/90977689/142726315-e5ce4e71-f1ba-426e-b949-ff1eb66275ff.png)
 
-Knowing that this data is obtained over a 7 year period, I took a count and divided by 7 to get the average number of crummy weather days in December per year:
 
-![image](https://user-images.githubusercontent.com/90977689/142482843-73ae4979-0f12-4ebb-b002-55605c29b33c.png)
-
-This shows us that there are roughly 13 crummy weather days per year in December!  This shows we might want to add this into our business plan to account that roughly 40% of our days in December can be expected to have low sales.  Now let's take a look at whether this happens every year or if the data is skewed by just a few rainy years.  The following code reveals:
-
-![image](https://user-images.githubusercontent.com/90977689/142483404-1f6e0bf8-ffe6-4178-aaf2-94a467a375ad.png)
-
-Indeed this is the case.  2010, 2011, and 2012 were almost complete washouts with respect to number of crummy weather days.  Surprisingly there were no days in 2014, 2015, or 2016 that met these criteria.  Understanding this in more detail would be helpful and so trying to get data for a broader time period would be helpful.  Also understanding business trends relative to temperature and precipitation would help us arrive at perhaps more informed cutoffs for temperature and rainfall amounts for defining crummy days.
+This shows us that we can expect a decent number of crummy days in December.  While 2014 was almost a complete washout with respect to number of crummy weather days, we should plan for at least one third of December to have days with low sales.   Understanding business trends relative to temperature and precipitation would help us arrive at perhaps more informed cutoffs for temperature and rainfall amounts for defining crummy days in a future query.  We may want to stock umbrellas and offer warm beverages in December to try to offset decreased surfboard and ice cream sales.
 
 
 

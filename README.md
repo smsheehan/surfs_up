@@ -28,7 +28,7 @@ Three main points from comparing the two analyses:
 
 At a high level, the data confirms there is opportunity for sales of both surf supplies and ice cream throughout the year.  However, it can be expected that there will be a sales dip in December based on the temperature trends revealed in the analysis.  There are some additional queries we can perform to better understand the December data.
 * First:  are we missing anything by looking at all seven years of data at once?  Is the median temperature wildly different from year to year?  We can probe this with the following code:
-* 
+
 ![image](https://user-images.githubusercontent.com/90977689/142726196-7f17fe21-4b18-4293-a318-bdb9643adb85.png)
 
     
@@ -36,7 +36,7 @@ What we see is that the mean temperature remains pretty consistent from year to 
     
 * Second:  Since temperature isn't the only deciding factor for business, I am curious as to how precipitation might play a role in how we think about December's business.  To test my approach, I arbitrarily decided that days where rainfall was >= 0.5" or days were the temperature was below 65 degree represented scenarios, or crummy days, where we are not likely to get a lot of business.  I probed this with the following code which filtered on either of the two weather occurences.
 
-![image](https://user-images.githubusercontent.com/90977689/142726315-e5ce4e71-f1ba-426e-b949-ff1eb66275ff.png)
+![image](https://user-images.githubusercontent.com/90977689/142726567-59cef1dd-6b2e-4f94-b851-a843b25fb1cd.png)
 
 
 This shows us that we can expect a decent number of crummy days in December.  While 2014 was almost a complete washout with respect to number of crummy weather days, we should plan for at least one third of December to have days with low sales.   Understanding business trends relative to temperature and precipitation would help us arrive at perhaps more informed cutoffs for temperature and rainfall amounts for defining crummy days in a future query.  We may want to stock umbrellas and offer warm beverages in December to try to offset decreased surfboard and ice cream sales.
